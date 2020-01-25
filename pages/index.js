@@ -11,6 +11,7 @@ import Header from '../components/Header';
 import Navbar from '../components/Navbar';
 import Carousel from '../components/Carousel';
 import Aboutme from '../components/Aboutme';
+import Footer from '../components/Footer';
 
 function Home({ posts }) {
   useEffect(() => {
@@ -28,11 +29,12 @@ function Home({ posts }) {
       <Header />
       <Navbar />
       <Carousel />
-      <Aboutme />
 
       {posts.map(post => (
         <Card title={post.title} details={post.details} date={post.date} />
       ))}
+
+      <Footer />
 
       <script
         src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

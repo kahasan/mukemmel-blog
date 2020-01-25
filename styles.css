@@ -1,3 +1,8 @@
+body,
+html {
+  height: 100%;
+}
+
 /********************* HEADER ***************/
 
 .hero {
@@ -61,7 +66,8 @@ a {
 .nav-bar {
   background-color: white;
   height: 96px;
-  padding: 40px 0;
+  line-height: 96px;
+  position: -webkit-sticky;
 }
 
 .nav-bar-shadow {
@@ -71,13 +77,15 @@ a {
 /********************* CARD ***************/
 
 .card-main {
-  float: right;
   width: 730px;
   height: 400px;
   box-shadow: 0 21px 50px rgba(0, 0, 0, 0.08);
   border-width: 0 !important;
   background-color: rgba(255, 255, 255, 0);
-  margin-bottom: 48px;
+  max-width: 550px;
+
+  margin-bottom: 64px;
+  position: relative;
 }
 
 .card-text img {
@@ -114,6 +122,33 @@ a {
 .about-me {
   width: 350px;
   height: 400px;
-  float: left;
+  float: right;
   position: relative;
+  background-color: red;
+}
+
+/********************* FOOTER ***************/
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 96px;
+  background-color: #ffffff;
+  margin: 48px 0;
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer-title {
+  font-size: 48px;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
+.footer-body {
+  margin-top: 16px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-align: center;
 }

@@ -12,10 +12,7 @@ function Carousel() {
         id="carouselExampleIndicators"
         className="carousel slide"
         data-ride="carousel"
-        style={{
-          marginBottom: '48px',
-          height: '480px'
-        }}
+        style={{ marginBottom: '96px' }}
       >
         <ol className="carousel-indicators">
           <li
