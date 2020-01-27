@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import '../styles.css';
 import '../bootstrap-4.3.1/dist/css/bootstrap.min.css';
+import Link from 'next/link';
 
 function Header() {
   return (
@@ -14,7 +15,11 @@ function Header() {
       <div className="container">
         <div className="hero">
           <div className="row align-items-center">
-            <h1 className="hero-title col-md-6">HASANKA</h1>
+            <h1 className="hero-title col-md-6">
+              <Link href="news">
+                <a>HASANKA</a>
+              </Link>
+            </h1>
 
             <div className="social-links col-md-6">
               <span className="welcome social-link">Hoşgeldiniz</span>

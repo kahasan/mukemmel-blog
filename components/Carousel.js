@@ -7,12 +7,11 @@ const photo3 = 'https://picsum.photos/1280/480?random=3';
 
 function Carousel() {
   return (
-    <div className="container">
+    <div className="container carousel-main">
       <div
         id="carouselExampleIndicators"
         className="carousel slide"
         data-ride="carousel"
-        style={{ marginBottom: '96px' }}
       >
         <ol className="carousel-indicators">
           <li

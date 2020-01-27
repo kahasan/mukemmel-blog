@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import fetch from 'isomorphic-unfetch';
 
-import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import '../styles.css';
 import '../bootstrap-4.3.1/dist/css/bootstrap.min.css';

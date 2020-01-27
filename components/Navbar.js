@@ -1,5 +1,6 @@
 import '../styles.css';
 import '../bootstrap-4.3.1/dist/css/bootstrap.min.css';
+import Link from 'next/link';
 
 function Navbar() {
   return (
@@ -7,17 +8,19 @@ function Navbar() {
       <div className="container">
         <div className="row">
           <div className="col">
+            <Link href="/">
+              <a className="nav-bar-item p-2 text-muted" href="#">
+                ANASAYFA
+              </a>
+            </Link>
             <a className="nav-bar-item p-2 text-muted" href="#">
-              HOME
+              YAZILAR
             </a>
             <a className="nav-bar-item p-2 text-muted" href="#">
-              ARTICLES
-            </a>
-            <a className="nav-bar-item p-2 text-muted" href="#">
-              CONTACT
+              İLETİŞİM
             </a>
           </div>
-          <div className="nav-search col">SEARCH</div>
+          <div className="nav-search col text-muted">ARAMA</div>
         </div>
       </div>
     </nav>
