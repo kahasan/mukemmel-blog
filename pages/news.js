@@ -1,14 +1,24 @@
-import Link from 'next/link';
+import React from 'react';
 
-function news() {
+const date = new Date();
+
+const currentDay = String(date.getDay());
+const currentDate = String(date.getDate());
+const currentYear = String(date.getFullYear());
+
+const today = currentDate + '.' + currentDay + '.' + currentYear;
+
+function BlogPost() {
   return (
-    <div>
-      <h1>asfasfasf</h1>
-      <Link href="/">
-        <a>home page</a>
-      </Link>
-    </div>
+    <form action="/post" method="post">
+      <h2 type="text">{today}</h2>
+      <input type="hidden" name="date" value={today} />
+      <input type="text" name="newPost" placeholder="Blog Basligi" />
+      <input type="text" name="newPostContent" placeholder="Blog İcerigi" />
+      <input type="number" name="photoid" />
+      <button type="submit">Post</button>
+    </form>
   );
 }
 
-export default news;
+export default BlogPost;

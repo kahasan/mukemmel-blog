@@ -4,6 +4,7 @@ import '../bootstrap-4.3.1/dist/css/bootstrap.min.css';
 import Link from 'next/link';
 
 function Card(props) {
+  var src = `https://picsum.photos/id/${props.photoid}/290/400`;
   return (
     <div className="container card-container ">
       <div className="card card-main ">
@@ -14,10 +15,7 @@ function Card(props) {
           ></link>
         </Head>
 
-        <img
-          className="card-img-top"
-          src="https://picsum.photos/290/400?random=1"
-        />
+        <img className="card-img-top" src={src} />
 
         <div className="card-body">
           <span className="card-information">

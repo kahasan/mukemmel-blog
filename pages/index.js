@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import fetch from 'isomorphic-unfetch';
 
 import ReactMarkdown from 'react-markdown';
@@ -13,16 +12,6 @@ import Aboutme from '../components/Aboutme';
 import Footer from '../components/Footer';
 
 function Home({ posts }) {
-  useEffect(() => {
-    var test = document.getElementsByClassName('nav-bar');
-    window.onscroll = function() {
-      if (window.pageYOffset >= test[0].offsetTop) {
-        test[0].classList.add('nav-bar-shadow');
-      } else {
-        test[0].classList.remove('nav-bar-shadow');
-      }
-    };
-  });
   return (
     <div>
       <Header />
@@ -30,7 +19,12 @@ function Home({ posts }) {
       <Carousel />
 
       {posts.map(post => (
-        <Card title={post.title} details={post.details} date={post.date} />
+        <Card
+          title={post.title}
+          details={post.details}
+          date={post.date}
+          photoid={post.photoid}
+        />
       ))}
 
       <Footer />
@@ -55,9 +49,9 @@ function Home({ posts }) {
 }
 
 Home.getInitialProps = async ({ req }) => {
-  const res = await fetch('http://localhost:3000/api/posts');
+  const res = await fetch('http://localhost:3000/api/blogs');
   const json = await res.json();
-  return { posts: json.posts };
+  return { posts: json };
 };
 
 export default Home;

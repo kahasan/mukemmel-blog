@@ -122,7 +122,7 @@ a {
 }
 
 .card-main {
-  max-height: 400px;
+  max-height: 1200px !important;
   box-shadow: 0 21px 50px rgba(0, 0, 0, 0.08);
   border-width: 0 !important;
   background-color: rgba(255, 255, 255, 0);
@@ -195,4 +195,45 @@ a {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   text-align: center;
+}
+
+/********************* FULLCONTENT PAGE ***************/
+
+@media (max-width: 767.98px) {
+  .fullcontent-img {
+    transform: scaleY(0.6);
+    position: relative;
+    top: -120px;
+  }
+
+  .fullcontent-main {
+    height: 1100px !important;
+    margin-top: 80px;
+  }
+
+  .fullcontent-body {
+    margin: 0;
+    position: relative !important;
+    top: -220px;
+  }
+}
+
+.fullcontent-img {
+  margin: auto !important;
+  /* max-width: 450px !important; */
+  width: 100% !important;
+}
+
+.fullcontent-main {
+  border-width: 0 !important;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 21px 50px rgba(0, 0, 0, 0.08);
+  max-height: fit-content;
+  height: 100%;
+  margin-bottom: 80px;
+}
+
+.fullcontent-body {
+  margin: 0;
+  position: relative !important;
 }

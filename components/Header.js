@@ -16,7 +16,7 @@ function Header() {
         <div className="hero">
           <div className="row align-items-center">
             <h1 className="hero-title col-md-6">
-              <Link href="news">
+              <Link href="/">
                 <a>HASANKA</a>
               </Link>
             </h1>
