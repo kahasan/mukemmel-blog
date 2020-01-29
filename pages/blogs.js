@@ -6,7 +6,7 @@ import Aboutme from '../components/Aboutme';
 import Footer from '../components/Footer';
 
 Blog.getInitialProps = async function() {
-  const res = await fetch('http://localhost:3000/api/blogs');
+  const res = await fetch('http://hasanka.blog/api/blogs');
   const json = await res.json();
   return { posts: json };
 };

@@ -48,7 +48,7 @@ function Home({ posts }) {
 }
 
 Home.getInitialProps = async ({ req }) => {
-  const res = await fetch('http://localhost:3000/api/blogs');
+  const res = await fetch('http://hasanka.blog/api/blogs');
   const json = await res.json();
   return { posts: json };
 };

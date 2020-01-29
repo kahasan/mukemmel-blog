@@ -99,6 +99,5 @@ app.prepare().then(() => {
 
   server.listen(PORT, err => {
     if (err) throw err;
-    console.log(`> Ready on http://localhost:${PORT}`);
   });
 });
