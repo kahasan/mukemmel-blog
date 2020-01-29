@@ -2,10 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const next = require('next');
 
-const port = parseInt(process.env.PORT, 10) || 3000;
+// const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
+
+const PORT = process.env.PORT || 3000;
 
 var mongoose = require('mongoose');
 
@@ -95,8 +97,8 @@ app.prepare().then(() => {
     return handle(req, res);
   });
 
-  server.listen(port, err => {
+  server.listen(PORT, err => {
     if (err) throw err;
-    console.log(`> Ready on http://localhost:${port}`);
+    console.log(`> Ready on http://localhost:${PORT}`);
   });
 });
