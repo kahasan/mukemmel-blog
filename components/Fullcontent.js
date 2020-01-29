@@ -14,17 +14,19 @@ function Fullcontent(props) {
           ></link>
         </Head>
 
-        <img className="card-img-top fullcontent-img" src={src} />
+        <div className="fullcontent">
+          <img className="card-img-top fullcontent-img" src={src} />
 
-        <div className="card-body fullcontent-body">
-          <span className="card-information">
-            <span>{props.date}</span>
-            <span> by Hasan Kahraman</span>
-          </span>
+          <div className="card-body fullcontent-body">
+            <span className="card-information">
+              <span>{props.date}</span>
+              <span> by Hasan Kahraman</span>
+            </span>
 
-          <h5 className="card-title">{props.title}</h5>
+            <h5 className="card-title">{props.title}</h5>
 
-          <p className="card-text">{props.details}</p>
+            <p className="card-text">{props.details}</p>
+          </div>
         </div>
       </div>
     </div>

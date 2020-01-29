@@ -1,14 +1,12 @@
 import React from 'react';
 
 const date = new Date();
-
 const currentDay = String(date.getDay());
 const currentDate = String(date.getDate());
 const currentYear = String(date.getFullYear());
-
 const today = currentDate + '.' + currentDay + '.' + currentYear;
 
-function BlogPost() {
+function Compose() {
   return (
     <form action="/post" method="post">
       <h2 type="text">{today}</h2>
@@ -21,4 +19,4 @@ function BlogPost() {
   );
 }
 
-export default BlogPost;
+export default Compose;

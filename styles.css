@@ -201,26 +201,27 @@ a {
 
 @media (max-width: 767.98px) {
   .fullcontent-img {
-    transform: scaleY(0.6);
+    transform: scaleY(0.7);
     position: relative;
-    top: -120px;
+  }
+
+  .fullcontent {
+    position: relative;
+    top: -55px;
   }
 
   .fullcontent-main {
-    height: 1100px !important;
-    margin-top: 80px;
+    height: fit-content;
   }
 
   .fullcontent-body {
-    margin: 0;
     position: relative !important;
-    top: -220px;
   }
 }
 
 .fullcontent-img {
   margin: auto !important;
-  /* max-width: 450px !important; */
+  margin-bottom: 20px !important;
   width: 100% !important;
 }
 

@@ -1,6 +1,5 @@
 import fetch from 'isomorphic-unfetch';
 
-import ReactMarkdown from 'react-markdown';
 import '../styles.css';
 import '../bootstrap-4.3.1/dist/css/bootstrap.min.css';
 
@@ -8,7 +7,6 @@ import Card from '../components/Card';
 import Header from '../components/Header';
 import Navbar from '../components/Navbar';
 import Carousel from '../components/Carousel';
-import Aboutme from '../components/Aboutme';
 import Footer from '../components/Footer';
 
 function Home({ posts }) {
@@ -24,6 +22,7 @@ function Home({ posts }) {
           details={post.details}
           date={post.date}
           photoid={post.photoid}
+          id={post._id}
         />
       ))}
 

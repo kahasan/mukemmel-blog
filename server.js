@@ -26,10 +26,18 @@ if (mongoose.models.Blog) {
   Blog = mongoose.model('Blog', blogSchema);
 }
 
-mongoose.connect('mongodb://localhost:27017/mukemmelblog', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect(
+  'mongodb+srv://admin-hasan:OwEdE3d5uCe9mw5z@cluster0-gpcz7.mongodb.net/mukemmelblog',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  }
+);
+
+// mongoose.connect('mongodb://localhost:27017/mukemmelblog', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// });
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -50,6 +58,19 @@ app.prepare().then(() => {
         console.log(err);
       } else {
         return res.json(blogs);
+      }
+    });
+  });
+
+  server.get('/api/:id', (req, res) => {
+    var id = req.params.id;
+    Blog.findById(id, function(err, blog) {
+      if (err) {
+        console.log(err);
+      } else {
+        // console.log(`helolayaa== ${req.params.id}`);
+        console.log('istedigin olduuu');
+        return res.json(blog);
       }
     });
   });

@@ -30,7 +30,7 @@ function Card(props) {
               ? props.details.substr(0, 350) + '...'
               : props.details}
           </p>
-          <Link href="[postId]">
+          <Link href="/[postId]" as={`/${props.id}`}>
             <a>
               <button type="button" className="btn btn-success card-btn">
                 Devamını Oku
