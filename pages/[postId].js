@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 Post.getInitialProps = async function(context) {
   const { postId } = context.query;
-  const res = await fetch(`https://hasanka-blog.herokuapp.com/api/${postId}`);
+  const res = await fetch(`http://www.hasanka.blog/api/${postId}`);
   const blog = await res.json();
   return blog;
 };

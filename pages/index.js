@@ -48,7 +48,7 @@ function Home({ posts }) {
 }
 
 Home.getInitialProps = async ({ req }) => {
-  const res = await fetch('https://hasanka-blog.herokuapp.com/api/blogs');
+  const res = await fetch('http://www.hasanka.blog/api/blogs');
   const json = await res.json();
   return { posts: json };
 };
