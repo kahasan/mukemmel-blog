@@ -26,9 +26,7 @@ function Header() {
             </h1>
 
             <div className="social-links col-xl-6">
-              <span className="welcome social-link">
-                Kişisel Blog'uma Hoşgeldiniz
-              </span>
+              <span className="welcome social-link">Blog'uma Hoşgeldiniz</span>
               <a
                 href="https://www.twitter.com/Hsn_Kahramn"
                 className="social-link"

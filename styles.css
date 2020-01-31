@@ -16,7 +16,7 @@ a {
   text-align: right;
   color: #727b81;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 .hero-title {
@@ -70,6 +70,9 @@ a {
   }
   .social-links {
     text-align: center;
+  }
+  .welcome {
+    display: none;
   }
 }
 
