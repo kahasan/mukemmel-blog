@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import fetch from 'isomorphic-unfetch';
 import Fullcontent from '../components/Fullcontent';
 import Header from '../components/Header';
