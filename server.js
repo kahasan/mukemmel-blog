@@ -28,18 +28,10 @@ if (mongoose.models.Blog) {
   Blog = mongoose.model('Blog', blogSchema);
 }
 
-mongoose.connect(
-  'mongodb+srv://admin-hasan:OwEdE3d5uCe9mw5z@cluster0-gpcz7.mongodb.net/mukemmelblog',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  }
-);
-
-// mongoose.connect('mongodb://localhost:27017/mukemmelblog', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// });
+mongoose.connect(process.env.DATABASE_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -70,8 +62,6 @@ app.prepare().then(() => {
       if (err) {
         console.log(err);
       } else {
-        // console.log(`helolayaa== ${req.params.id}`);
-        console.log('istedigin olduuu');
         return res.json(blog);
       }
     });
