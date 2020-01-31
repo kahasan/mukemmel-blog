@@ -47,8 +47,16 @@ function Home({ posts }) {
   );
 }
 
+let url = '';
+
+if (process.env.NODE_ENV !== 'production') {
+  url = 'http://localhost:3000';
+} else {
+  url = 'http://www.hasanka.blog';
+}
+
 Home.getInitialProps = async ({ req }) => {
-  const res = await fetch('http://www.hasanka.blog/api/blogs');
+  const res = await fetch(`${url}/api/blogs`);
   const json = await res.json();
   return { posts: json };
 };

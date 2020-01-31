@@ -5,8 +5,16 @@ import Navbar from '../components/Navbar';
 import Aboutme from '../components/Aboutme';
 import Footer from '../components/Footer';
 
+let url = '';
+
+if (process.env.NODE_ENV !== 'production') {
+  url = 'http://localhost:3000';
+} else {
+  url = 'http://www.hasanka.blog';
+}
+
 Blog.getInitialProps = async function() {
-  const res = await fetch('http://www.hasanka.blog/api/blogs');
+  const res = await fetch(`${url}/api/blogs`);
   const json = await res.json();
   return { posts: json };
 };
