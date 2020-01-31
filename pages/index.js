@@ -1,4 +1,6 @@
+import React, { useEffect } from 'react';
 import fetch from 'isomorphic-unfetch';
+import Head from 'next/head';
 
 import '../styles.css';
 import '../bootstrap-4.3.1/dist/css/bootstrap.min.css';
@@ -12,6 +14,23 @@ import Footer from '../components/Footer';
 function Home({ posts }) {
   return (
     <div>
+      <Head>
+        {/* Global site tag (gtag.js) - Google Analytics  */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-157507299-1"
+        ></script>
+        <script>
+          {useEffect(() => {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-157507299-1');
+          })}
+        </script>
+      </Head>
       <Header />
       <Navbar />
       <Carousel

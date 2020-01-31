@@ -3,6 +3,7 @@ import Card from '../components/Card';
 import Header from '../components/Header';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Head from 'next/head';
 
 let url = '';
 
@@ -21,6 +22,23 @@ Blog.getInitialProps = async function() {
 export default function Blog({ posts }) {
   return (
     <div>
+      <Head>
+        {/* Global site tag (gtag.js) - Google Analytics  */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-157507299-1"
+        ></script>
+        <script>
+          {useEffect(() => {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-157507299-1');
+          })}
+        </script>
+      </Head>
       <Header />
       <Navbar />
 
