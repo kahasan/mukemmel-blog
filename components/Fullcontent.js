@@ -1,6 +1,7 @@
 import '../styles.css';
 import Head from 'next/head';
 import '../bootstrap-4.3.1/dist/css/bootstrap.min.css';
+import ReactMarkdown from 'react-markdown';
 
 function Fullcontent(props) {
   var src = `https://picsum.photos/id/${props.photoid}/1140/500`;
@@ -25,7 +26,7 @@ function Fullcontent(props) {
 
             <h5 className="card-title">{props.title}</h5>
 
-            <p className="card-text">{props.details}</p>
+            <ReactMarkdown source={props.details} className="card-text" />
           </div>
         </div>
       </div>
