@@ -2,7 +2,6 @@ import fetch from 'isomorphic-unfetch';
 import Card from '../components/Card';
 import Header from '../components/Header';
 import Navbar from '../components/Navbar';
-import Aboutme from '../components/Aboutme';
 import Footer from '../components/Footer';
 
 let url = '';

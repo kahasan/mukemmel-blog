@@ -17,7 +17,7 @@ function Header() {
           <div className="row align-items-center">
             <h1 className="hero-title col-md-6">
               <Link href="/">
-                <a>HASANKA</a>
+                <a style={{ color: 'black' }}>HASANKA</a>
               </Link>
             </h1>
 
@@ -26,18 +26,21 @@ function Header() {
               <a
                 href="https://www.twitter.com/Hsn_Kahramn"
                 className="social-link"
+                target="_blank"
               >
                 <img src="../icons/twitter.svg" className="icon"></img>
               </a>
               <a
                 href="https://www.linkedin.com/in/hasan-kahraman-790289111/"
                 className="social-link"
+                target="_blank"
               >
                 <img src="../icons/linkedin.svg" className="icon"></img>
               </a>
               <a
                 href="https://www.instagram.com/hsnkahraman/"
                 className="social-link"
+                target="_blank"
               >
                 <img src="../icons/instagram.svg" className="icon"></img>
               </a>

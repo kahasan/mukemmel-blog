@@ -14,7 +14,17 @@ function Home({ posts }) {
     <div>
       <Header />
       <Navbar />
-      <Carousel />
+      <Carousel
+        photoid1={posts[posts.length - 1].photoid}
+        photoid2={posts[posts.length - 2].photoid}
+        photoid3={posts[posts.length - 3].photoid}
+        title1={posts[posts.length - 1].title}
+        title2={posts[posts.length - 2].title}
+        title3={posts[posts.length - 3].title}
+        id1={posts[posts.length - 1]._id}
+        id2={posts[posts.length - 2]._id}
+        id3={posts[posts.length - 3]._id}
+      />
 
       {posts.map(post => (
         <Card

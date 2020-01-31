@@ -1,13 +1,17 @@
 import '../styles.css';
 import '../bootstrap-4.3.1/dist/css/bootstrap.min.css';
+import Link from 'next/link';
+import Head from 'next/head';
 
-const photo1 = 'https://picsum.photos/1280/480?random=1';
-const photo2 = 'https://picsum.photos/1280/480?random=2';
-const photo3 = 'https://picsum.photos/1280/480?random=3';
-
-function Carousel() {
+function Carousel(props) {
   return (
     <div className="container carousel-main">
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css?family=Marcellus&display=swap"
+          rel="stylesheet"
+        ></link>
+      </Head>
       <div
         id="carouselExampleIndicators"
         className="carousel slide"
@@ -24,39 +28,54 @@ function Carousel() {
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={photo1} className="d-block w-100" alt="..." />
+            <img
+              src={`https://picsum.photos/id/${props.photoid1}/1280/500?blur=2`}
+              className="d-block w-100"
+              alt="..."
+            />
+            <div class="container">
+              <Link href="/[postId]" as={`/${props.id1}`}>
+                <a>
+                  <div class="carousel-body">
+                    <h1>{props.title1}</h1>
+                  </div>
+                </a>
+              </Link>
+            </div>
           </div>
           <div className="carousel-item">
-            <img src={photo2} className="d-block w-100" alt="..." />
+            <img
+              src={`https://picsum.photos/id/${props.photoid2}/1280/500?blur=2`}
+              className="d-block w-100"
+              alt="..."
+            />
+            <div class="container">
+              <Link href="/[postId]" as={`/${props.id2}`}>
+                <a>
+                  <div class="carousel-body">
+                    <h1>{props.title2}</h1>
+                  </div>
+                </a>
+              </Link>
+            </div>
           </div>
           <div className="carousel-item">
-            <img src={photo3} className="d-block w-100" alt="..." />
+            <img
+              src={`https://picsum.photos/id/${props.photoid3}/1280/500?blur=2`}
+              className="d-block w-100"
+              alt="..."
+            />
+            <div class="container">
+              <Link href="/[postId]" as={`/${props.id3}`}>
+                <a>
+                  <div class="carousel-body">
+                    <h1>{props.title3}</h1>
+                  </div>
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
-        <a
-          className="carousel-control-prev"
-          href="#carouselExampleIndicators"
-          role="button"
-          data-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="sr-only">Previous</span>
-        </a>
-        <a
-          className="carousel-control-next"
-          href="#carouselExampleIndicators"
-          role="button"
-          data-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="sr-only">Next</span>
-        </a>
       </div>
     </div>
   );

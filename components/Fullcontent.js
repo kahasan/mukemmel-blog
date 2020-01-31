@@ -3,7 +3,7 @@ import Head from 'next/head';
 import '../bootstrap-4.3.1/dist/css/bootstrap.min.css';
 
 function Fullcontent(props) {
-  var src = `https://picsum.photos/id/${props.photoid}/1140/400`;
+  var src = `https://picsum.photos/id/${props.photoid}/1140/500`;
   return (
     <div className="container card-container fullcontent-container">
       <div className="card fullcontent-main ">

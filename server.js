@@ -1,8 +1,9 @@
+require('dotenv').config();
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const next = require('next');
 
-// const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -28,10 +29,14 @@ if (mongoose.models.Blog) {
   Blog = mongoose.model('Blog', blogSchema);
 }
 
-mongoose.connect(process.env.DATABASE_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect(
+  process.env.DATABASE_URL,
+
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  }
+);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
