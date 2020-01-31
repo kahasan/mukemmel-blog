@@ -14,11 +14,22 @@ a {
 
 .welcome {
   text-align: right;
+  color: #727b81;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2em;
 }
 
 .hero-title {
   font-size: 96px;
   font-family: 'Playfair Display', serif;
+}
+
+.hero-title a {
+  color: #212121;
+}
+
+.hero-title a:hover {
+  color: #212121;
 }
 
 .icon {
@@ -33,12 +44,23 @@ a {
 }
 
 @media (max-width: 991.98px) {
-  .icon {
-    width: 30px !important;
-    height: 30px !important;
-  }
   .hero-title {
     font-size: 72px !important;
+  }
+  .hero-title {
+    text-align: center;
+  }
+  .social-links {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-title {
+    text-align: center;
+  }
+  .social-links {
+    text-align: center;
   }
 }
 
